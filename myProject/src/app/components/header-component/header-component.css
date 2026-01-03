@@ -1,7 +1,6 @@
-
 .navbar.bg-black {
   background-color: #000 !important;
-  border-bottom: 2px solid rgba(255,255,255,0.04);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.04);
 }
 
 .logo {

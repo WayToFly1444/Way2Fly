@@ -1,11 +1,7 @@
 <div class="container-fluid p-0">
   <!-- HERO SLIDESHOW SECTION -->
   <div class="hero-slider mt-1">
-    <ngb-carousel
-      [interval]="5000"
-      [pauseOnHover]="false"
-      [wrap]="true"
-      [showNavigationArrows]="true"
+    <ngb-carousel [interval]="5000" [pauseOnHover]="false" [wrap]="true" [showNavigationArrows]="true"
       [showNavigationIndicators]="false">
 
       <ng-template ngbSlide>
@@ -63,50 +59,50 @@
 
     </ngb-carousel>
   </div>
-<!-- write a message -->
-<div class="container py-5 mt-2" style="background-color: #0C1C2C; color: white;">
-  <h2 class="mb-4 text-center">HOW WE CAN HELP</h2>
-  <h4 class="mb-4">Write a Message</h4>
+  <!-- write a message -->
+  <div class="container py-5 mt-2" style="background-color: #0C1C2C; color: white;">
+    <h2 class="mb-4 text-center">HOW WE CAN HELP</h2>
+    <h4 class="mb-4">Write a Message</h4>
 
-  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-    <div class="row mb-3">
-      <div class="col-md-6">
-        <label for="name" class="form-label">Your Name*</label>
-        <input type="text" id="name" class="form-control" formControlName="name">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="name" class="form-label">Your Name*</label>
+          <input type="text" id="name" class="form-control" formControlName="name">
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email Address*</label>
+          <input type="email" id="email" class="form-control" formControlName="email">
+        </div>
       </div>
-      <div class="col-md-6">
-        <label for="email" class="form-label">Email Address*</label>
-        <input type="email" id="email" class="form-control" formControlName="email">
-      </div>
-    </div>
 
-    <div class="row mb-3">
-      <div class="col-md-6">
-        <label for="phone" class="form-label">Phone Number*</label>
-        <input type="tel" id="phone" class="form-control" formControlName="phone">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="phone" class="form-label">Phone Number*</label>
+          <input type="tel" id="phone" class="form-control" formControlName="phone">
+        </div>
+        <div class="col-md-6">
+          <label for="visaType" class="form-label">Select Visa Type*</label>
+          <select id="visaType" class="form-select" formControlName="visaType">
+            <option value="" disabled>Select Visa Type</option>
+            <option value="Tourist">Tourist Visa</option>
+            <option value="Business">Business Visa</option>
+            <option value="Student">Student Visa</option>
+            <option value="Work">Work Visa</option>
+          </select>
+        </div>
       </div>
-      <div class="col-md-6">
-        <label for="visaType" class="form-label">Select Visa Type*</label>
-        <select id="visaType" class="form-select" formControlName="visaType">
-          <option value="" disabled>Select Visa Type</option>
-          <option value="Tourist">Tourist Visa</option>
-          <option value="Business">Business Visa</option>
-          <option value="Student">Student Visa</option>
-          <option value="Work">Work Visa</option>
-        </select>
+
+      <div class="mb-3">
+        <label for="comment" class="form-label">Leave A Comment</label>
+        <textarea id="comment" rows="4" class="form-control" formControlName="comment"></textarea>
       </div>
-    </div>
 
-    <div class="mb-3">
-      <label for="comment" class="form-label">Leave A Comment</label>
-      <textarea id="comment" rows="4" class="form-control" formControlName="comment"></textarea>
-    </div>
-
-    <div class="text-end">
-      <button type="submit" class="btn btn-warning px-4" [disabled]="contactForm.invalid">SEND A MESSAGE</button>
-    </div>
-  </form>
-</div>
+      <div class="text-end">
+        <button type="submit" class="btn btn-warning px-4" [disabled]="contactForm.invalid">SEND A MESSAGE</button>
+      </div>
+    </form>
+  </div>
 
 
   <!-- COUNTRY CARDS SECTION -->
@@ -181,104 +177,104 @@
     </div>
   </div>
   <section class="visa-categories-section">
-  <div class="container">
-    <div class="section-header">
-      <p class="subtitle">WHAT WE’RE OFFERING</p>
-      <h2>Providing Value for Visa Categories</h2>
-      <p class="description">At the heart of our commitment to providing exceptional immigration solutions stands</p>
-    </div>
-
-    <div class="categories-grid">
-      <!-- Tourist Visa -->
-      <div class="visa-card">
-        <h3>Tourist Visa</h3>
-        <p>Visit new places to discover with a Tourist Visa. We deliver your documents</p>
-        <img src="assets/tourist-visa.png" alt="Tourist Visa Icon">
+    <div class="container">
+      <div class="section-header">
+        <p class="subtitle">WHAT WE’RE OFFERING</p>
+        <h2>Providing Value for Visa Categories</h2>
+        <p class="description">At the heart of our commitment to providing exceptional immigration solutions stands</p>
       </div>
 
-      <!-- Business Visa -->
-      <div class="visa-card">
-        <h3>Business Visa</h3>
-        <p>Developing your trade, setting up new sales channels. Your visa is ready.</p>
-        <img src="assets/business-visa.png" alt="Business Visa Icon">
-      </div>
-
-      <!-- Work Visa -->
-      <div class="visa-card">
-        <h3>Work Visa</h3>
-        <p>Get your Visa now for new business and earning. Apply Now for visa</p>
-        <img src="assets/work-visa.png" alt="Work Visa Icon">
-      </div>
-
-      <!-- Family Visa -->
-      <div class="visa-card">
-        <h3>Family Visa</h3>
-        <p>Developing your trade, setting up new sales channels. Your visa is ready.</p>
-        <img src="assets/family-visa.png" alt="Family Visa Icon">
-      </div>
-    </div>
-  </div>
-</section>
-<section class="apply-visa-section mt-1">
-  <div class="container text-center">
-    <p class="subtitle">FOLLOW SIMPLE STEPS</p>
-    <h2 class="title">Apply Visa</h2>
-
-    <div class="steps-wrapper">
-      <div class="step">
-        <div class="icon-circle">
-          <img src="assets/note.png" alt="Step 1" />
-          <span class="step-number">01</span>
+      <div class="categories-grid">
+        <!-- Tourist Visa -->
+        <div class="visa-card">
+          <h3>Tourist Visa</h3>
+          <p>Visit new places to discover with a Tourist Visa. We deliver your documents</p>
+          <img src="assets/tourist-visa.png" alt="Tourist Visa Icon">
         </div>
-        <p class="step-text">
-          Complete and submit the contact us form for the required visa category.
-        </p>
-      </div>
 
-      <div class="step">
-        <div class="icon-circle">
-          <img src="assets/document.png" alt="Step 2" />
-          <span class="step-number">02</span>
+        <!-- Business Visa -->
+        <div class="visa-card">
+          <h3>Business Visa</h3>
+          <p>Developing your trade, setting up new sales channels. Your visa is ready.</p>
+          <img src="assets/business-visa.png" alt="Business Visa Icon">
         </div>
-        <p class="step-text">
-          Please ensure you submit all the necessary documents to us for visa processing.
-        </p>
-      </div>
 
-      <div class="step">
-        <div class="icon-circle">
-          <img src="assets/internet.png" alt="Step 3" />
-          <span class="step-number">03</span>
+        <!-- Work Visa -->
+        <div class="visa-card">
+          <h3>Work Visa</h3>
+          <p>Get your Visa now for new business and earning. Apply Now for visa</p>
+          <img src="assets/work-visa.png" alt="Work Visa Icon">
         </div>
-        <p class="step-text">
-          All you need to do is wait for your visa to be fully processed.
-        </p>
+
+        <!-- Family Visa -->
+        <div class="visa-card">
+          <h3>Family Visa</h3>
+          <p>Developing your trade, setting up new sales channels. Your visa is ready.</p>
+          <img src="assets/family-visa.png" alt="Family Visa Icon">
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="testimonials-section mt-1">
-  <div class="container text-center">
-    <p class="subtitle">HOW WE CAN HELP</p>
-    <h2 class="title">What They’re Saying</h2>
+  </section>
+  <section class="apply-visa-section mt-1">
+    <div class="container text-center">
+      <p class="subtitle">FOLLOW SIMPLE STEPS</p>
+      <h2 class="title">Apply Visa</h2>
 
-    <ngb-carousel [interval]="2000" [pauseOnHover]="true" [wrap]="true" [showNavigationIndicators]="false">
-      
-<ng-template ngbSlide *ngFor="let slide of testimonialSlides">
-        <div class="testimonial-slide-row">
-          <div class="testimonial-card" *ngFor="let testimonial of slide">
-            <div class="stars">
-              <ng-container *ngFor="let star of [1,2,3,4,5]">
-                <span class="star">★</span>
-              </ng-container>
-            </div>
-            <p class="testimonial-text">{{ testimonial.message }}</p>
-            <h5 class="testimonial-author">{{ testimonial.author }}</h5>
+      <div class="steps-wrapper">
+        <div class="step">
+          <div class="icon-circle">
+            <img src="assets/note.png" alt="Step 1" />
+            <span class="step-number">01</span>
           </div>
+          <p class="step-text">
+            Complete and submit the contact us form for the required visa category.
+          </p>
         </div>
-      </ng-template>
-    </ngb-carousel>
-  </div>
-</section>
+
+        <div class="step">
+          <div class="icon-circle">
+            <img src="assets/document.png" alt="Step 2" />
+            <span class="step-number">02</span>
+          </div>
+          <p class="step-text">
+            Please ensure you submit all the necessary documents to us for visa processing.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="icon-circle">
+            <img src="assets/internet.png" alt="Step 3" />
+            <span class="step-number">03</span>
+          </div>
+          <p class="step-text">
+            All you need to do is wait for your visa to be fully processed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="testimonials-section mt-1">
+    <div class="container text-center">
+      <p class="subtitle">HOW WE CAN HELP</p>
+      <h2 class="title">What They’re Saying</h2>
+
+      <ngb-carousel [interval]="2000" [pauseOnHover]="true" [wrap]="true" [showNavigationIndicators]="false">
+
+        <ng-template ngbSlide *ngFor="let slide of testimonialSlides">
+          <div class="testimonial-slide-row">
+            <div class="testimonial-card" *ngFor="let testimonial of slide">
+              <div class="stars">
+                <ng-container *ngFor="let star of [1,2,3,4,5]">
+                  <span class="star">★</span>
+                </ng-container>
+              </div>
+              <p class="testimonial-text">{{ testimonial.message }}</p>
+              <h5 class="testimonial-author">{{ testimonial.author }}</h5>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+  </section>
   <app-footer-component></app-footer-component>
 </div>

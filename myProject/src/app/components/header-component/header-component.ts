@@ -11,8 +11,8 @@ import { NgbCollapseModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './header-component.css',
 })
 export class HeaderComponent {
-isCollapsed: boolean = true;
-  public toggle(): void { 
+  isCollapsed: boolean = true;
+  public toggle(): void {
     this.isCollapsed = !this.isCollapsed;
   }
 
