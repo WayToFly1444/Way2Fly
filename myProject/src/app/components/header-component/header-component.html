@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="assets/universal_logo.png" alt="logo" class="logo" />
+      <span class="brand-text ms-2 d-none d-lg-inline">WAY 2 FLY</span>
+    </a>
+    <button class="navbar-toggler" type="button" aria-label="Toggle navigation" (click)="toggle()" [attr.aria-expanded]="!isCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse-wrapper carousel slide" data-ride="carousel">
+      <ul class="navbar-nav mx-auto text-center">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="header-contact d-flex align-items-center ms-auto">
+      <div class="city">BANGALORE</div>
+      <div class="phone ms-3"><span class="phone-icon">☎</span><strong class="ms-0">+91 98855 10701</strong></div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,339 @@
+/* ===========================
+   HERO SLIDESHOW
+=========================== */
+.hero-slider {
+  height: 100vh;
+  position: relative;
+
+  .hero-slide {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      will-change: transform;
+      z-index: 0;
+      animation: kenBurnsZoom 12s ease-in-out infinite;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(23,21,46,0.95) 20%,
+        rgba(23,21,46,0.6) 50%,
+        rgba(23,21,46,0.2) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 80px;
+      transform: translateY(-50%);
+      color: #fff;
+      max-width: 600px;
+      z-index: 2;
+
+      h1 {
+        font-size: 64px;
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 30px;
+      }
+
+      .vertical-text {
+        position: absolute;
+        left: -60px;
+        top: 0;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        font-size: 14px;
+        letter-spacing: 3px;
+        opacity: 0.6;
+      }
+
+      .btn-discover {
+        background: #ffde59;
+        border: none;
+        padding: 14px 32px;
+        font-weight: 700;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &:hover {
+          background: #ffd633;
+        }
+      }
+    }
+  }
+}
+
+/* Ken Burns Animation */
+@keyframes kenBurnsZoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+
+/* ===========================
+   COUNTRY CARDS
+=========================== */
+.card-wrapper {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.country-card {
+  position: relative;
+  width: 260px;
+  height: 360px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 45px rgba(0,0,0,0.4);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .flag {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    background: #fff;
+    color: #000;
+    font-size: 22px;
+    padding: 6px 8px;
+    border-radius: 50%;
+  }
+
+  h4 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+
+/* ===========================
+   VISA CATEGORIES
+=========================== */
+.visa-categories-section {
+  padding: 80px 0;
+  background: #f3f2f9;
+  font-family: 'Inter', sans-serif;
+
+  .section-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+
+    .subtitle {
+      font-size: 14px;
+      font-weight: 600;
+      color: #6b6b8d;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 40px;
+      font-weight: 800;
+      color: #17152e;
+      margin-bottom: 15px;
+    }
+
+    .description {
+      font-size: 16px;
+      color: #7d7d92;
+    }
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .visa-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px 20px 40px 20px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #17152e;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #7d7d92;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+  }
+}
+
+
+/* ===========================
+   APPLY VISA SECTION
+=========================== */
+.apply-visa-section {
+  background-color: #17152e;
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center;
+
+  .subtitle {
+    color: #ffde59;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 50px;
+  }
+
+  .steps-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+
+    .step {
+      max-width: 250px;
+
+      .icon-circle {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 20px auto;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 60px;
+          height: 60px;
+        }
+
+        .step-number {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          background-color: #ffde59;
+          color: #17152e;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 700;
+        }
+      }
+
+      .step-text {
+        color: #999;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+
+/* ===========================
+   TESTIMONIALS
+=========================== */
+.testimonials-section {
+  background-color: #f5f5fa;
+  padding: 80px 20px;
+  text-align: center;
+
+  .subtitle {
+    color: #17152e;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    color: #17152e;
+  }
+
+  .testimonial-slide-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .testimonial-card {
+    max-width: 400px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    text-align: left;
+
+    .stars {
+      color: #ffb800;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-author {
+      font-weight: 700;
+      color: #17152e;
+      font-size: 16px;
+    }
+  }
+}
