@@ -1,0 +1,72 @@
+<div class="chatbot-container" [class.open]="isOpen">
+
+  <!-- Header -->
+  <div class="chatbot-header d-flex align-items-center justify-content-between">
+    <span></span>
+    <button (click)="closeChat()" class="close-btn">&times;</button>
+  </div>
+
+  <!-- Body -->
+  <div class="chatbot-body">
+
+    <!-- Animated Avatar IMAGE -->
+    <div class="chatbot-avatar">
+      <img src="assets/avatar.png" alt="Avatar">
+    </div>
+
+    <!-- Greeting -->
+    <div class="chatbot-greeting text-center">
+      <h5>Hello, <strong>Traveler</strong></h5>
+      <p>How can I help you?</p>
+    </div>
+
+    <!-- Suggested Questions (ABOVE textbox) -->
+    <div class="chatbot-suggestions">
+      @for (question of suggestedQuestions; track question) {
+        <button (click)="selectQuestion(question)">
+          {{ question }}
+        </button>
+      }
+    </div>
+
+    <!-- Messages -->
+    <div class="chatbot-messages">
+      @for (msg of messages; track $index) {
+        <div class="chat-message" [ngClass]="msg.type">
+          {{ msg.text }}
+        </div>
+      }
+    </div>
+
+  </div>
+
+  <!-- Textbox (ALWAYS AT BOTTOM) -->
+  <div class="chatbot-input">
+    <input [(ngModel)]="userInput" type="text" placeholder="Type a message...">
+
+    <button (click)="sendMessage()">
+      <i class="fa-solid fa-arrow-right"></i>
+    </button>
+
+    <button class="call-btn">
+      <i class="fa-solid fa-phone"></i>
+    </button>
+  </div>
+
+</div>
+
+<button
+  class="chatbot-toggle"
+  (click)="toggleChat()"
+  [ngbTooltip]="tooltipTpl"
+  placement="top"
+  container="body"
+>
+  <img src="assets/avatar.png" alt="Chatbot Icon">
+</button>
+
+<!-- Tooltip Template -->
+<ng-template #tooltipTpl>
+  <div style="font-weight:600;">Hi, talk to Chitti</div>
+    <div style="font-size:13px; opacity:0.85;">Need any help?</div>
+</ng-template>
