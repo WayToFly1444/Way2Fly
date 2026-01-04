@@ -1,0 +1,72 @@
+.services-section {
+  padding: 80px 0;
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+}
+
+/* Service Card */
+.service-card {
+  background: #ffffff;
+  border: 1px solid #d9d9e3;
+  border-radius: 14px;
+  padding: 26px 22px;
+  height: 100%;
+  position: relative;
+}
+
+.service-card h5 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 14px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.8;
+}
+
+/* Corner shape */
+.corner-shape {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 46px;
+  height: 46px;
+  background: #e5e7eb;
+  border-top-left-radius: 16px;
+}
+
+/* CTA Section */
+.cta-box {
+  background: linear-gradient(135deg, #1a1a2e, #0f0f2d);
+  padding: 40px;
+  border-radius: 18px;
+  color: #ffffff;
+}
+
+.cta-box h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.cta-btn {
+  background: #ffffff;
+  color: #1a1a2e;
+  padding: 14px 30px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .cta-box {
+    text-align: center;
+  }
+
+  .cta-btn {
+    margin-top: 20px;
+  }
+}

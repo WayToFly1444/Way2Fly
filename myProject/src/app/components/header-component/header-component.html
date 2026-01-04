@@ -1,25 +1,55 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top" style="height: 141px;">
   <div class="container-fluid">
+
+    <!-- Logo -->
     <a class="navbar-brand d-flex align-items-center" href="#">
       <img src="assets/universal_logo.png" alt="logo" class="logo" />
-      <span class="brand-text ms-2 d-none d-lg-inline">WAY 2 FLY</span>
+      <span class="brand-text ms-2 d-none d-lg-inline">WAY2FLY Global</span>
     </a>
+
+    <!-- Toggle -->
     <button class="navbar-toggler" type="button" aria-label="Toggle navigation" (click)="toggle()"
       [attr.aria-expanded]="!isCollapsed">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse-wrapper carousel slide" data-ride="carousel">
+
+    <!-- Menu -->
+    <div class="collapse-wrapper">
       <ul class="navbar-nav mx-auto text-center">
-        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <a routerLink="/" class="nav-link">Home</a>
+        </li>
+
+        <li class="nav-item" routerLinkActive="active">
+          <a routerLink="/services" class="nav-link">Services</a>
+        </li>
+
+        <li class="nav-item" routerLinkActive="active">
+          <a routerLink="/about" class="nav-link">About Us</a>
+        </li>
+
+        <li class="nav-item" routerLinkActive="active">
+          <a routerLink="/contact" class="nav-link">Contact</a>
+        </li>
+
       </ul>
     </div>
-
-    <div class="header-contact d-flex align-items-center ms-auto">
-      <div class="city">BANGALORE</div>
-      <div class="phone ms-3"><span class="phone-icon">☎</span><strong class="ms-0">+91 98855 10701</strong></div>
+    <div class="collapse-wrapper mx-auto" style="color:white; display:flex; gap:20px;">
+      <span class="city"><b>BANGALORE</b></span>
+      <span class="city"><b>CHENNAI</b></span>
+      <span class="city"><b>HYDERABAD</b></span>
+      <span class="city"><b>MUMBAI</b></span>
+      <span class="city"><b>PUNE</b></span>
     </div>
+    <!-- Right Contact -->
+    <div class="header-contact d-flex align-items-center ms-auto">
+      <div class="city text-white">BANGALORE</div>
+      <div class="phone ms-3">
+        <i class="fas fa-phone fa-lg text-warning" ></i>
+        <strong>+91 98855 10701</strong>
+      </div>
+    </div>
+
   </div>
 </nav>

@@ -1,0 +1,60 @@
+.privacy-section {
+  padding: 90px 0;
+  background: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Title */
+.page-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 26px;
+}
+
+/* Intro paragraph */
+.intro-text {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.9;
+  margin-bottom: 34px;
+  max-width: 900px;
+}
+
+/* Section headings */
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 28px 0 14px;
+}
+
+/* Bullet list */
+.policy-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.policy-list li {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.9;
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+}
+
+.policy-list li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 32px;
+  }
+}

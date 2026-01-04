@@ -1,0 +1,30 @@
+<section class="services-section">
+  <div class="container">
+
+    <!-- SERVICE CARDS -->
+    <div class="row g-4">
+      @for (service of services; track service.title) {
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card">
+            <h5>{{ service.title }}</h5>
+            <p>{{ service.desc }}</p>
+            <span class="corner-shape"></span>
+          </div>
+        </div>
+      }
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box mt-5">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h3>Are you Looking for Visa Consultation?</h3>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <button class="btn cta-btn" [routerLink]="['/contact']">BOOK APPOINTMENT</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

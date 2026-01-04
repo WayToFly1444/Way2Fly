@@ -1,8 +1,8 @@
 import { NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { NgbCarousel, NgbCarouselConfig, NgbCarouselModule, NgbSlide } from '@ng-bootstrap/ng-bootstrap';
-import { FooterComponent } from '../footer-component/footer-component';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ContactComponent } from '../contact-component/contact-component';
 
 @Component({
   selector: 'app-home-component',
@@ -11,8 +11,8 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
     NgbSlide,
     NgbCarouselModule,
     NgFor,
-    FooterComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ContactComponent
   ],
   templateUrl: './home-component.html',
   styleUrl: './home-component.css',
@@ -54,8 +54,8 @@ export class HomeComponent implements OnInit {
       { message: "Fast and reliable visa service with great customer support!", author: "Rohan" },
       { message: "Professional team and quick processing. I got my visa approved smoothly.", author: "Aisha" }
     ];
-    for (let i = 0; i < this.testimonials.length; i += 2) {
-      this.testimonialSlides.push(this.testimonials.slice(i, i + 2));
+    for (let i = 0; i < this.testimonials.length; i += 3) {
+      this.testimonialSlides.push(this.testimonials.slice(i, i + 3));
     }
   }
 

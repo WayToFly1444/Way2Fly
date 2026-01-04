@@ -1,0 +1,100 @@
+.contact-section {
+  padding: 90px 0;
+  background: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Titles */
+.subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #6b7280;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin: 12px 0 40px;
+}
+
+/* Inputs */
+.custom-input {
+  background: #f2f2f8;
+  border: none;
+  border-radius: 14px;
+  padding: 18px 20px;
+  font-size: 15px;
+}
+
+.custom-input:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Button */
+.send-btn {
+  background: #ffe15a;
+  padding: 18px 40px;
+  font-weight: 700;
+  border-radius: 14px;
+  border: none;
+}
+
+/* Contact Card */
+.contact-card {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.card-header {
+  background: linear-gradient(135deg, #1a1a2e, #0f0f2d);
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.card-header i {
+  font-size: 28px;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.email {
+  font-size: 18px;
+  color: #6b7280;
+}
+
+.location {
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f2f2f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .title {
+    font-size: 36px;
+  }
+}

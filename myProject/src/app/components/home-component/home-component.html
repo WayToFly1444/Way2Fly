@@ -1,6 +1,6 @@
 <div class="container-fluid p-0">
   <!-- HERO SLIDESHOW SECTION -->
-  <div class="hero-slider mt-1">
+  <div class="hero-slider mt-0">
     <ngb-carousel [interval]="5000" [pauseOnHover]="false" [wrap]="true" [showNavigationArrows]="true"
       [showNavigationIndicators]="false">
 
@@ -30,7 +30,7 @@
           <div class="hero-overlay"></div>
 
           <div class="hero-content">
-            <span class="vertical-text">WAY 2 FLY</span>
+            <span class="vertical-text">WAY2FLY Global</span>
             <h1>
               Your gateway to<br>
               global opportunities
@@ -47,7 +47,7 @@
           <div class="hero-overlay"></div>
 
           <div class="hero-content">
-            <span class="vertical-text">WAY 2 FLY</span>
+            <span class="vertical-text">WAY2FLY Global</span>
             <h1>
               Your gateway to<br>
               global opportunities
@@ -60,53 +60,11 @@
     </ngb-carousel>
   </div>
   <!-- write a message -->
-  <div class="container py-5 mt-2" style="background-color: #0C1C2C; color: white;">
-    <h2 class="mb-4 text-center">HOW WE CAN HELP</h2>
-    <h4 class="mb-4">Write a Message</h4>
-
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-      <div class="row mb-3">
-        <div class="col-md-6">
-          <label for="name" class="form-label">Your Name*</label>
-          <input type="text" id="name" class="form-control" formControlName="name">
-        </div>
-        <div class="col-md-6">
-          <label for="email" class="form-label">Email Address*</label>
-          <input type="email" id="email" class="form-control" formControlName="email">
-        </div>
-      </div>
-
-      <div class="row mb-3">
-        <div class="col-md-6">
-          <label for="phone" class="form-label">Phone Number*</label>
-          <input type="tel" id="phone" class="form-control" formControlName="phone">
-        </div>
-        <div class="col-md-6">
-          <label for="visaType" class="form-label">Select Visa Type*</label>
-          <select id="visaType" class="form-select" formControlName="visaType">
-            <option value="" disabled>Select Visa Type</option>
-            <option value="Tourist">Tourist Visa</option>
-            <option value="Business">Business Visa</option>
-            <option value="Student">Student Visa</option>
-            <option value="Work">Work Visa</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="mb-3">
-        <label for="comment" class="form-label">Leave A Comment</label>
-        <textarea id="comment" rows="4" class="form-control" formControlName="comment"></textarea>
-      </div>
-
-      <div class="text-end">
-        <button type="submit" class="btn btn-warning px-4" [disabled]="contactForm.invalid">SEND A MESSAGE</button>
-      </div>
-    </form>
-  </div>
+<app-contact-component></app-contact-component>
 
 
   <!-- COUNTRY CARDS SECTION -->
-  <div class="immigration-section mt-2" style="background-color: #0C1C2C;">
+  <div class="immigration-section mt-1" style="background-color: #0C1C2C;">
     <div class="container-fluid">
       <div class="row align-items-center">
         <div class="col-lg-5 text-section">
@@ -276,5 +234,4 @@
       </ngb-carousel>
     </div>
   </section>
-  <app-footer-component></app-footer-component>
 </div>

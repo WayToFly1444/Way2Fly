@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { NgbCollapseModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header-component',
   imports: [
     NgbCollapseModule,
-    NgbModalModule
+    NgbModalModule,
+    RouterModule
   ],
   templateUrl: './header-component.html',
   styleUrl: './header-component.css',
