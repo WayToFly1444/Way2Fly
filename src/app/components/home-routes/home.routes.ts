@@ -5,8 +5,10 @@ import { ServicesComponent } from "../services-component/services-component";
 import { PrivacyComponent } from "../privacy-component/privacy-component";
 
 export const routes: Routes = [
+    
     {path: 'about', component: AboutComponent },
     {path:'contact', component: ContactComponent },
     {path:'services', component: ServicesComponent},
     {path:'privacy-policy', component: PrivacyComponent}
+    
 ];
