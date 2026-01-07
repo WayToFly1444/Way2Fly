@@ -4,8 +4,8 @@
     <!-- SERVICE CARDS -->
     <div class="row g-4">
       @for (service of services; track service.title) {
-        <div class="col-lg-3 col-md-6">
-          <div class="service-card">
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="service-card h-100">
             <h5>{{ service.title }}</h5>
             <p>{{ service.desc }}</p>
             <span class="corner-shape"></span>
@@ -16,12 +16,16 @@
 
     <!-- CTA -->
     <div class="cta-box mt-5">
-      <div class="row align-items-center">
-        <div class="col-lg-8">
+      <div class="row align-items-center gy-3">
+        <div class="col-12 col-lg-8 text-center text-lg-start">
           <h3>Are you Looking for Visa Consultation?</h3>
         </div>
-        <div class="col-lg-4 text-lg-end">
-          <button class="btn cta-btn" [routerLink]="['/contact']">BOOK APPOINTMENT</button>
+        <div class="col-12 col-lg-4 text-center text-lg-end">
+          <button
+            class="btn cta-btn w-100 w-lg-auto"
+            [routerLink]="['/contact']">
+            BOOK APPOINTMENT
+          </button>
         </div>
       </div>
     </div>

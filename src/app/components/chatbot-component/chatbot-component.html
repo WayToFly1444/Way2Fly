@@ -1,4 +1,4 @@
-<div class="chatbot-container" [class.open]="isOpen">
+<div class="chatbot-container d-flex flex-column" [class.open]="isOpen">
 
   <!-- Header -->
   <div class="chatbot-header d-flex align-items-center justify-content-between">
@@ -6,12 +6,12 @@
     <button (click)="closeChat()" class="close-btn">&times;</button>
   </div>
 
-  <!-- Body -->
-  <div class="chatbot-body">
+  <!-- Body (scrollable on mobile) -->
+  <div class="chatbot-body flex-grow-1 overflow-auto px-2 px-md-3">
 
     <!-- Animated Avatar IMAGE -->
-    <div class="chatbot-avatar">
-      <img src="assets/avatar.png" alt="Avatar">
+    <div class="chatbot-avatar text-center my-3">
+      <img src="assets/avatar.png" alt="Avatar" class="img-fluid">
     </div>
 
     <!-- Greeting -->
@@ -20,8 +20,8 @@
       <p>How can I help you?</p>
     </div>
 
-    <!-- Suggested Questions (ABOVE textbox) -->
-    <div class="chatbot-suggestions">
+    <!-- Suggested Questions -->
+    <div class="chatbot-suggestions d-flex flex-wrap justify-content-center gap-2 my-3">
       @for (question of suggestedQuestions; track question) {
         <button (click)="selectQuestion(question)">
           {{ question }}
@@ -30,7 +30,7 @@
     </div>
 
     <!-- Messages -->
-    <div class="chatbot-messages">
+    <div class="chatbot-messages d-flex flex-column gap-2">
       @for (msg of messages; track $index) {
         <div class="chat-message" [ngClass]="msg.type">
           {{ msg.text }}
@@ -40,21 +40,27 @@
 
   </div>
 
-  <!-- Textbox (ALWAYS AT BOTTOM) -->
-  <div class="chatbot-input">
-    <input [(ngModel)]="userInput" type="text" placeholder="Type a message...">
+  <!-- Textbox (STICKS TO BOTTOM on mobile) -->
+  <div class="chatbot-input d-flex align-items-center gap-2 px-2 px-md-3">
+    <input
+      [(ngModel)]="userInput"
+      type="text"
+      placeholder="Type a message..."
+      class="form-control"
+    >
 
-    <button (click)="sendMessage()">
+    <button (click)="sendMessage()" class="btn btn-primary">
       <i class="fa-solid fa-arrow-right"></i>
     </button>
 
-    <button class="call-btn">
+    <button class="call-btn btn btn-outline-secondary d-none d-sm-inline-flex">
       <i class="fa-solid fa-phone"></i>
     </button>
   </div>
 
 </div>
 
+<!-- Toggle Button -->
 <button
   class="chatbot-toggle"
   (click)="toggleChat()"
@@ -68,5 +74,5 @@
 <!-- Tooltip Template -->
 <ng-template #tooltipTpl>
   <div style="font-weight:600;">Hi, talk to Chitti</div>
-    <div style="font-size:13px; opacity:0.85;">Need any help?</div>
+  <div style="font-size:13px; opacity:0.85;">Need any help?</div>
 </ng-template>

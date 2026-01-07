@@ -47,7 +47,6 @@
   cursor: pointer;
 }
 
-/* BODY (IMPORTANT FIX) */
 .chatbot-body {
   flex: 1;
   padding: 0 18px;
@@ -221,4 +220,52 @@
     box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
   }
 }
+
+@media (max-width: 575.98px) {
+  .chatbot-container {
+    width: 90%;
+    height: 60%; /* reduced from 70% */
+    bottom: 70px; /* slightly lower to fit screen */
+    right: 5%;
+    border-radius: 20px;
+  }
+
+  .chatbot-avatar img {
+    width: 55px; /* smaller avatar */
+    height: 55px;
+    margin: 20px 0 8px; /* reduce top/bottom spacing */
+  }
+
+  .chatbot-input input {
+    padding: 6px 10px; /* smaller input height */
+  }
+
+  .chatbot-input button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .chatbot-toggle {
+    width: 48px;
+    height: 48px;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  /* Suggested Questions become grid for small screens */
+  .chatbot-suggestions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); /* smaller min-width */
+    gap: 6px;
+    justify-items: center;
+    margin-bottom: 10px; /* reduce spacing below */
+  }
+
+  .chatbot-suggestions button {
+    padding: 6px 10px; /* smaller buttons for grid */
+    font-size: 12px;
+  }
+}
+
+
 

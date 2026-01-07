@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top" style="height: 141px;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top py-3 py-lg-0" style="min-height: 141px;">
   <div class="container-fluid">
 
     <!-- Logo -->
@@ -8,13 +8,17 @@
     </a>
 
     <!-- Toggle -->
-    <button class="navbar-toggler" type="button" aria-label="Toggle navigation" (click)="toggle()"
+    <button
+      class="navbar-toggler"
+      type="button"
+      aria-label="Toggle navigation"
+      (click)="toggle()"
       [attr.aria-expanded]="!isCollapsed">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <!-- Menu -->
-    <div class="collapse-wrapper">
+    <div class="collapse-wrapper d-none d-lg-block">
       <ul class="navbar-nav mx-auto text-center">
 
         <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
@@ -35,18 +39,21 @@
 
       </ul>
     </div>
-    <div class="collapse-wrapper mx-auto" style="color:white; display:flex; gap:20px;">
+
+    <!-- Cities -->
+    <div class="collapse-wrapper mx-auto d-none d-lg-flex gap-3 text-white">
       <span class="city"><b>BANGALORE</b></span>
       <span class="city"><b>CHENNAI</b></span>
       <span class="city"><b>HYDERABAD</b></span>
       <span class="city"><b>MUMBAI</b></span>
       <span class="city"><b>PUNE</b></span>
     </div>
+
     <!-- Right Contact -->
-    <div class="header-contact d-flex align-items-center ms-auto">
+    <div class="header-contact d-none d-lg-flex align-items-center ms-auto">
       <div class="city text-white">BANGALORE</div>
-      <div class="phone ms-3">
-        <i class="fas fa-phone fa-lg text-warning" ></i>
+      <div class="phone ms-3 text-white">
+        <i class="fas fa-phone fa-lg text-warning"></i>
         <strong>+91 98855 10701</strong>
       </div>
     </div>

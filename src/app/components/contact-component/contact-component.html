@@ -1,86 +1,104 @@
 <section class="contact-section">
-    <div class="container">
-        <div class="row g-5">
+  <div class="container">
+    <div class="row g-5">
 
-            <!-- LEFT FORM -->
-            <div class="col-lg-8">
-                <span class="subtitle">HOW WE CAN HELP</span>
-                <h2 class="title">Write a Message</h2>
+      <!-- LEFT FORM -->
+      <div class="col-12 col-lg-8">
+        <span class="subtitle">HOW WE CAN HELP</span>
+        <h2 class="title">Write a Message</h2>
 
-                <form [formGroup]="contactForm" (ngSubmit)="submit()">
-                    <div class="row g-4">
+        <form [formGroup]="contactForm" (ngSubmit)="submit()">
+          <div class="row g-4">
 
-                        <div class="col-md-6">
-                            <input type="text" class="form-control custom-input" placeholder="Your Name*"
-                                formControlName="name" />
-                        </div>
-
-                        <div class="col-md-6">
-                            <input type="email" class="form-control custom-input" placeholder="Email Address*"
-                                formControlName="email" />
-                        </div>
-
-                        <div class="col-md-6">
-                            <input type="tel" class="form-control custom-input" placeholder="Phone Number*"
-                                formControlName="phone" />
-                        </div>
-
-                        <div class="col-md-6">
-                            <select class="form-select custom-input" formControlName="visaType">
-                                <option value="" disabled>
-                                    Select Visa Type*
-                                </option>
-
-                                @for (visa of visaTypes; track visa) {
-                                <option [value]="visa">
-                                    {{ visa }}
-                                </option>
-                                }
-                            </select>
-
-                        </div>
-
-                        <div class="col-12">
-                            <textarea rows="5" class="form-control custom-input" placeholder="Leave A Comment"
-                                formControlName="comment"></textarea>
-                        </div>
-
-                        <div class="col-12">
-                            <button type="submit" class="btn send-btn">
-                                SEND A MESSAGE
-                            </button>
-                        </div>
-
-                    </div>
-                </form>
+            <div class="col-12 col-md-6">
+              <input
+                type="text"
+                class="form-control custom-input"
+                placeholder="Your Name*"
+                formControlName="name"
+              />
             </div>
 
-            <!-- RIGHT CONTACT CARD -->
-            <div class="col-lg-4">
-                <div class="contact-card">
-
-                    <div class="card-header">
-                        <i class="bi bi-telephone"></i>
-                        <div>
-                            <small>CALL NOW</small>
-                            <h5>+91 98855 10701</h5>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <p class="email">contact@way2fly.in</p>
-                        <p class="location">BANGALORE</p>
-
-                        <div class="social-icons">
-                            <span class="icon">W</span>
-                            <span class="icon">I</span>
-                            <span class="icon">X</span>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="col-12 col-md-6">
+              <input
+                type="email"
+                class="form-control custom-input"
+                placeholder="Email Address*"
+                formControlName="email"
+              />
             </div>
+
+            <div class="col-12 col-md-6">
+              <input
+                type="tel"
+                class="form-control custom-input"
+                placeholder="Phone Number*"
+                formControlName="phone"
+              />
+            </div>
+
+            <div class="col-12 col-md-6">
+              <select
+                class="form-select custom-input"
+                formControlName="visaType"
+              >
+                <option value="" disabled>
+                  Select Visa Type*
+                </option>
+
+                @for (visa of visaTypes; track visa) {
+                  <option [value]="visa">
+                    {{ visa }}
+                  </option>
+                }
+              </select>
+            </div>
+
+            <div class="col-12">
+              <textarea
+                rows="5"
+                class="form-control custom-input"
+                placeholder="Leave A Comment"
+                formControlName="comment"
+              ></textarea>
+            </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn send-btn w-100 w-md-auto">
+                SEND A MESSAGE
+              </button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+      <!-- RIGHT CONTACT CARD -->
+      <div class="col-12 col-lg-4">
+        <div class="contact-card h-100">
+
+          <div class="card-header d-flex align-items-center gap-3">
+            <i class="bi bi-telephone"></i>
+            <div>
+              <small>CALL NOW</small>
+              <h5>+91 98855 10701</h5>
+            </div>
+          </div>
+
+          <div class="card-body text-center text-lg-start">
+            <p class="email">contact@way2fly.in</p>
+            <p class="location">BANGALORE</p>
+
+            <div class="social-icons d-flex justify-content-center justify-content-lg-start gap-3">
+              <span class="icon">W</span>
+              <span class="icon">I</span>
+              <span class="icon">X</span>
+            </div>
+          </div>
 
         </div>
+      </div>
+
     </div>
+  </div>
 </section>

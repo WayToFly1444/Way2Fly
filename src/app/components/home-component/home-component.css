@@ -343,3 +343,33 @@
     }
   }
 }
+
+/* ===========================
+   RESPONSIVE FIXES
+=========================== */
+
+@media (max-width: 991px) {
+  .hero-slider {
+    height: 90vh;
+
+    .hero-slide {
+      height: 90vh;
+
+      .hero-content {
+        left: 20px;
+        right: 20px;
+        max-width: 100%;
+        text-align: center;
+
+        h1 {
+          font-size: 40px;
+          line-height: 1.2;
+        }
+
+        .vertical-text {
+          display: none;
+        }
+      }
+    }
+  }
+}
