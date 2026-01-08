@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-footer-component',
@@ -10,5 +10,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './footer-component.css',
 })
 export class FooterComponent {
+constructor( private router:Router){}
 
+  onPrivacy(): void {
+    this.router.navigate(['/privacy-policy']);
+  }
 }
