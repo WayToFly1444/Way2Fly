@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "myProject": {
+    "way2fly": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -63,10 +63,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "myProject:build:production"
+              "buildTarget": "way2fly:build:production"
             },
             "development": {
-              "buildTarget": "myProject:build:development"
+              "buildTarget": "way2fly:build:development"
             }
           },
           "defaultConfiguration": "development"
